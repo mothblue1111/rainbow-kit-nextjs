@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+@font-face {
+  font-family: 'Bluu';
+  src: url('fonts/BluuNext-master/Fonts/webfonts/bluunext-bold.ttf') format('truetype');
+}
+page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: white;
+}
+border{
+  border-radius: 10px;
+}
+backgroundColor{
+  background-color:  #0f0716;
+}
+body{
+  background-color:  #0f0716;
+  color: white;
+}
+.navbar{
+  text-align: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.custom-icon{
+  padding-top: 10px;
+  padding-left: 10px;
+  position: absolute;
+}
+.navbar-custom{
+  height: 4vh;
+}
+.animated-banner{
+  width: 100%;
+  overflow: hidden;
+}
+.animated-text{
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+  animation-fill-mode: both;
+  animation-delay: -20s;
+}
+
+.marquee-container{
+  overflow: hidden;
+  width: 100%;
+
+  
+.marquee{
+  animation-fill-mode: both;
+  display: flex;
+  left: 100%;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+}
+.marquee-item {
+  display: inline-block;
+  white-space: nowrap;
+}
+.marquee2{
+    animation-delay: 15s;
+    display: inline-block;
+  }
+  b {
+    padding-left: 10px;
+  }
+}
+.curved-box{
+  border-radius: 30px;
+  outline: none;
+  border: 2px solid #f310e1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+  margin-left: 10px;
+}
+.curved-box3{
+  border-radius: 30px;
+  outline: none;
+  border-width: 2px 0 2px 2px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.curved-box1 {
+  border-radius: 30px 0 0 30px; /* top-left top-right bottom-right bottom-left */
+  outline: none;
+  padding: 20px;
+  border: 2px solid #f310e1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.curved-box1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -2px;
+  bottom: 0;
+  width: 2px;
+  background-color: #f310e1;
+  border-radius: 0 30px 30px 0;
+  display: flex;
+  flex-direction: column;
+}
+.curved-box2 {
+  border-radius: 0 30px 30px 0; /* top-left top-right bottom-right bottom-left */
+  outline: none;
+  padding: 20px;
+  border: 2px solid #f310e1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.curved-box2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -2px;
+  bottom: 0;
+  width: 2px;
+  background-color: #f310e1;
+  border-radius: 30px 0 0 30px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+.uniswap{
+  padding: 20px;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 50px;
+}
+.uniswap1{
+  padding: 20px;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.saysc{
+  padding: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+.liquid{
+  flex: 1;
+  margin-top: 50px;
+  font-size: 1.5rem;
+}
+.leftBox{
+  padding: 20px;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.leftBox1{
+  padding: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.edge{
+  border-radius: 5px;
+  border: 2px solid #f310e1;
+  padding: 10px;
+  margin: 10px;
+}
+.vertical-line {
+  border-right: 2px solid #f310e1;
+  height: 100%;
+  width: 2px;
+}
+.container {
+  max-width: 100% !important;
+}
+.vertical-line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #000;
+  left: 50%; /* Adjust the position as needed */
+  transform: translateX(-50%);
+}
+.image {
+  max-width: 100%;
+  max-height: 100%;
+  margin-right: 10px;
+}
+div[class="row"] {
+  outline: 1px dotted rgba(0, 0, 0, 0.25);
+}
+
+div[class^="col-"] {
+  background-color: rgba(255, 0, 0, 0.2);
+  outline: 1px dotted rgba(0, 0, 0, 0.5);
+} 
+
+@keyframes marquee {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%
+  }
+}
